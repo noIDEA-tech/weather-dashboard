@@ -3,7 +3,7 @@
 
 ## Website Links: 
 - [GitHub-Link](https://github.com/noIDEA-tech/weather-dashboard)
-- [Deployed-Link](https://ADD.LINK)
+- [Deployed-Link](https://weather-dashboard-b0q7.onrender.com)
 
 ## Description
 This is a weather dashboard application that users can use to pull up 5-day weather forecasts by city by entering the city name in the input field and then clicking the "search" button. This prompt will call the OpenWeather API and display the current weather forecast in the top box in addition to a 5-day weather forecast. Previous city searches are saved for the user to manage by retrieving a previous search or clearing the search history by clicking on the delete icon located next to each city saved in search history.
@@ -41,11 +41,11 @@ In root directory, run the following terminal command to start the server and cl
 ## License
 MIT
 
-## Features
+## Features:
 - View 5-day forecast displaying the date, an icon representation of weather conditions, temperature, wind speed, and humidity
 - User search history display allowing users to click on a previously searched city to display updated weather forecast
 
-## Tests
+## Tests:
 ```m
     cd server && npm run build 
     cd .. npm run start:dev
