@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const dbPath = path.join(__dirname, '../db/searchHistory.json');
+const dbPath = path.join(__dirname, '../db/searchHistory.sjon');
 
 // TODO: Define a City class with name and id properties
 interface City {
