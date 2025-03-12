@@ -99,7 +99,7 @@ class WeatherService {
       
     return dailyForecasts;
   }
- 
+
   // Main method to get weather data for a city
   async getWeatherForCity(city: string): Promise<Weather[]> {
     try {

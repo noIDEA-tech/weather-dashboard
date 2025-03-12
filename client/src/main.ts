@@ -53,7 +53,7 @@ const fetchWeather = async (cityName: string) => {
     console.log('weatherData: ', weatherData);
 
     renderCurrentWeather(weatherData[0]);
-    renderForecast(weatherData.slice(1));
+    renderForecast(weatherData.slice(0, 6)); // Include day 0 through day 4 in the forecast
     
     return weatherData;
   } catch (error) {
@@ -106,10 +106,10 @@ Render Functions
 */
 
 const renderCurrentWeather = (currentWeather: any): void => {
-  if (!currentWeather) {
-    console.error('No current weather data provided');
-    return;
-  }
+  // if (!currentWeather) {
+  //   console.error('No current weather data provided');
+  //   return;
+  // }
 
   const { city, date, icon, iconDescription, tempF, windSpeed, humidity } =
     currentWeather;
@@ -121,24 +121,26 @@ const renderCurrentWeather = (currentWeather: any): void => {
   );
   weatherIcon.setAttribute('alt', iconDescription);
   weatherIcon.setAttribute('class', 'weather-img');
+  heading.append(weatherIcon);
   tempEl.textContent = `Temp: ${tempF}°F`;
   windEl.textContent = `Wind: ${windSpeed} MPH`;
   humidityEl.textContent = `Humidity: ${humidity} %`;
 
   // Create a new container to hold all elements
-  const newContainer = document.createElement('div');
-  newContainer.classList.add('card-body');
-  newContainer.id = 'today';
+  // const newContainer = document.createElement('div');
+  // newContainer.classList.add('card-body');
+  // newContainer.id = 'today';
   
   // Append elements to the new container
-  newContainer.appendChild(heading);
-  newContainer.appendChild(tempEl);
-  newContainer.appendChild(windEl);
-  newContainer.appendChild(humidityEl);
+  // newContainer.appendChild(heading);
+  // newContainer.appendChild(tempEl);
+  // newContainer.appendChild(windEl);
+  // newContainer.appendChild(humidityEl);
   
   // Replace the old container with the new one
-  if (todayContainer && todayContainer.parentNode) {
-    todayContainer.parentNode.replaceChild(newContainer, todayContainer);
+  if (todayContainer) {
+    todayContainer.innerHTML = '';
+    todayContainer.append(heading, tempEl, windEl, humidityEl);
   }
 };
 
