@@ -22,15 +22,18 @@ This is a weather dashboard application that users can use to pull up 5-day weat
 - [Contact](#contact)
 
 ## Installation
-```m
+
 From terminal root directory, run the following commands: 
-    - npm install
-    - cd server && npm install axios && npm run build
-    - cd .. npm run start:dev
+```m
+    npm install
+    cd server && npm install axios && npm run build
+    cd .. npm run start:dev
 ```
 ## Usage
-In root directory, run the following terminal command to start the server and client browswer: `npm run start:dev`
-
+In root directory, run the following terminal command to start the server and client browser: 
+```m
+    npm run start:dev
+```
 ## Credits:
 - Nancy Watreas
 - - AI assistance provided by Anthropic's Claude for debugging, and code review and refactoring
@@ -43,8 +46,10 @@ MIT
 - User search history display allowing users to click on a previously searched city to display updated weather forecast
 
 ## Tests
-cd server && npm run build cd .. npm run start:dev
-
+```m
+    cd server && npm run build 
+    cd .. npm run start:dev
+```
 ## Contact
 If there are any questions or concerns, I can be reached at:
 ##### [github: noIDEA-tech](https://github.com/noIDEA-tech)
