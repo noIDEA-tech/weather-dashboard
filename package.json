@@ -22,8 +22,6 @@
     "@types/uuid": "^10.0.0",
     "concurrently": "^8.2.2",
     "nodemon": "^3.1.0",
-    "typescript": "^5.8.2",
-    "vite": "^6.2.1",
     "wait-on": "^7.2.0"
   },
   "dependencies": {
